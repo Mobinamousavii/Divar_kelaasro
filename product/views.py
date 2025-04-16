@@ -1,14 +1,14 @@
 from product.models import Product
 from django.http.response import HttpResponse
 from rest_framework.generics import ListAPIView, CreateAPIView, DestroyAPIView, UpdateAPIView
-from product.serializers import ProductSerializer, ProductListSerializer
+from product.serializers import ProductSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework.permissions import IsAuthenticated , IsAdminUser
 from product.permisions import IsCreatorOrAdmin
 class ProdustListView(ListAPIView):
         queryset = Product.objects.all()
-        serializer_class = ProductListSerializer
+        serializer_class = ProductSerializer
         filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
         filterset_fields = {
                 'urgent' :['exact'],

@@ -9,9 +9,4 @@ class ProductSerializer(ModelSerializer):
         read_only_fields = ['user']
         
 
-class ProductListSerializer(ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
-
      
