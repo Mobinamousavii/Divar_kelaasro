@@ -7,6 +7,9 @@ class Product(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)
     info = models.CharField(max_length=100, null=True, blank=True)
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    city = models.CharField(max_length=100)
+    urgent = models.BooleanField(default=False)
+    has_photo = models.BooleanField(default=False)
     class ProductType(models.TextChoices):
         REAL_ESTATAE = 'REAL_ESTATE'
         VEHICLES = 'VEHICLES'
