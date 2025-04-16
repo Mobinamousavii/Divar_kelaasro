@@ -11,7 +11,7 @@ class Product(models.Model):
     urgent = models.BooleanField(default=False)
     has_photo = models.BooleanField(default=False)
     class ProductType(models.TextChoices):
-        REAL_ESTATAE = 'REAL_ESTATE'
+        REAL_ESTATE = 'REAL_ESTATE'
         VEHICLES = 'VEHICLES'
         DIGITAL_GOODS = 'DIGITAL_GOODS'
         HOME_KITCHEN = 'HOME_KITCHEN'
